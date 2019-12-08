@@ -54,8 +54,8 @@
         if (count($erros) == 0) {
             $senha = md5($senha);
             $sql = "SELECT * FROM usuario WHERE nome='$nome' AND senha='$senha'";
-            //$res = mysqli_query($con, $sql);
-            if (mysql_num_rows($con, $sql)) {
+            $res = mysqli_query($con, $sql);
+            if (mysqli_num_rows($res)) {
                 $_SESSION['nome'] = $nome;
                 $_SESSION['success'] = "BEM VINDO";
                 header('location: dashboard.php');
