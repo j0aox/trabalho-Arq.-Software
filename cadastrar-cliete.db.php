@@ -10,7 +10,7 @@ if (isset($_POST['adicionar'])) {
     $sexo = mysqli_real_escape_string($con, $_POST['sexo']);
     $resultado = "INSERT INTO cliente (nome, sexo) VALUES ('$cliente', '$sexo')";
     $resul = mysqli_query($con, $resultado);
-    header('location: cadastrar-cliente.php');
+    header('location: cadastrar-cliete.php');
 }
 
 
