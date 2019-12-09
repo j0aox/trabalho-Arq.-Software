@@ -21,6 +21,6 @@
             <?php if (isset($_SESSION['nome'])): ?>
             Bem Vindo: <?php echo $_SESSION['nome']; ?>
             <?php endif ?>
-            <button class="btn btn-outline-success my-2 my-sm-0"><a href="index.php?sair='1'">Sair</a></button>
+            <a href="index.php" class="btn btn-success">Sair</a>
         </div>
 </nav>
