@@ -16,7 +16,7 @@
     <div class="row">
         <div class="col-md-4">
             <h3 class="text-center text-secondary">Adicionar Cliente</h3>
-            <form action="cadastrar-cliete.php" method="post" enctype="multipart/form-data">
+            <form action="" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <input type="text" name="cliente" class="form-control" placeholder="nome do cliente">
                 </div>

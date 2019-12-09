@@ -2,9 +2,6 @@
 
 <?php 
 
-//$sexo = $_POST['sexo'];
-//$cliente = $_POST['cliente'];
-
 if (isset($_POST['adicionar'])) {
     $cliente = mysqli_real_escape_string($con, $_POST['cliente']);
     $sexo = mysqli_real_escape_string($con, $_POST['sexo']);
@@ -12,7 +9,5 @@ if (isset($_POST['adicionar'])) {
     $resul = mysqli_query($con, $resultado);
     header('location: cadastrar-cliente.php');
 }
-
-
 
 ?>
