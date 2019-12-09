@@ -11,7 +11,7 @@
                         Cadastrar
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="cadastrar-cliete.php">Clientes</a>
+                            <a class="dropdown-item" href="cadastrar-cliente.php">Clientes</a>
                             <a class="dropdown-item" href="#">Carros</a>
                         </div>
                     </li>
