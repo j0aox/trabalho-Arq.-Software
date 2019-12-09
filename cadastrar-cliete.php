@@ -6,10 +6,12 @@
     <div class="row justify-content-center">
         <div class="col-md-10">
             <h3 class="text-center text-dark">Cadastrar Clientes</h3>
+            <hr>
         </div>
     </div>
     <div class="row">
         <div class="col-md-4">
+            <h3 class="text-center text-secondary">Adicionar Cliente</h3>
             <form action="#" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <input type="text" name="cliente" class="form-control" placeholder="nome do cliente" required>
@@ -28,7 +30,26 @@
             </form>
         </div>
         <div class="col-md-8">
-
+            <h3 class="text-center text-secondary">Lista de Clientes</h3>
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Sexo</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>João Amador</td>
+                        <td>Masculino</td>
+                        <td>
+                            <a href="#" class="btn btn-success">Editar</a>
+                            <a href="#" class="btn btn-danger">Excluir</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
