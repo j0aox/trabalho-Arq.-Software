@@ -18,9 +18,15 @@
             </div>
         </div>
         <div>
-            <?php if (isset($_SESSION['nome'])): ?>
+            <?php /*if (isset($_SESSION['nome'])): ?>
             Bem Vindo: <?php echo $_SESSION['nome']; ?>
-            <?php endif ?>
+            <?php endif */?>
+
+<?php
+    session_start();
+    if (isset($_SESSION['nome'])): ?>
+    Bem Vindo: <?php echo $_SESSION['nome']; ?>
+<?php endif ?>
             <a href="index.php" class="btn btn-success">Sair</a>
         </div>
 </nav>

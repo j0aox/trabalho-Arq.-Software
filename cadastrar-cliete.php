@@ -12,9 +12,9 @@
     <div class="row">
         <div class="col-md-4">
             <h3 class="text-center text-secondary">Adicionar Cliente</h3>
-            <form action="#" method="post" enctype="multipart/form-data">
+            <form action="cadastrar-cliete.php" method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                    <input type="text" name="cliente" class="form-control" placeholder="nome do cliente" required>
+                    <input type="text" name="cliente" class="form-control" placeholder="nome do cliente">
                 </div>
                 <div class="form-group custom-control custom-radio">
                     <input type="radio" id="customRadio1" name="sexo" value="M" class="custom-control-input">
@@ -25,7 +25,7 @@
                     <label class="custom-control-label" for="customRadio2">Feminino</label>
                 </div>
                 <div class="form-group">
-                    <input type="submit" name="adicionar" class="btn btn-secondary btn-block">
+                    <button type="submit" name="login" class="btn btn-secondary btn-block">login</button>
                 </div>
             </form>
         </div>
