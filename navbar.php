@@ -5,15 +5,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-            <a class="nav-item nav-link" href="dashboard.php">Dashboard<span class="sr-only">(current)</span></a>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Cadastrar
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Pessoas</a>
-                </div>
-            </li>
+                <a class="nav-item nav-link" href="dashboard.php">Dashboard<span class="sr-only">(current)</span></a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Cadastrar
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="cadastrar-cliete.php">Clientes</a>
+                            <a class="dropdown-item" href="#">Carros</a>
+                        </div>
+                    </li>
             </div>
         </div>
         <div>
