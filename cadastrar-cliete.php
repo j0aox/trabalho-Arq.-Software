@@ -2,6 +2,10 @@
 
 <?php include('navbar.php') ?>
 
+<?php include('cadastrar-cliete.db.php') ?>
+
+
+
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-10">
@@ -25,7 +29,7 @@
                     <label class="custom-control-label" for="customRadio2">Feminino</label>
                 </div>
                 <div class="form-group">
-                    <button type="submit" name="login" class="btn btn-secondary btn-block">login</button>
+                    <button type="submit" name="adicionar" class="btn btn-secondary btn-block">Adicionar</button>
                 </div>
             </form>
         </div>
