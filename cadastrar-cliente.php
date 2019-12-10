@@ -52,8 +52,8 @@
                         <td><?php echo $row['nome']; ?></td>
                         <td><?php echo $row['sexo']; ?></td>
                         <td>
-                            <a href="#" class="btn btn-success">Editar</a>
-                            <a href="#" class="btn btn-danger">Excluir</a>
+                            <a href="cadastrar-cliente.php" class="btn btn-success">Editar</a>
+                            <a href="cadastrar-cliente.php?excluir= <?php echo $row['id']; ?> " class="btn btn-danger">Excluir</a>
                         </td>
                     </tr>
                 <?php } ?>
