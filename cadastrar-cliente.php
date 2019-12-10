@@ -34,6 +34,9 @@
             </form>
         </div>
         <div class="col-md-8">
+        <?php 
+            $sql = mysqli_query($con, "SELECT * FROM cliente");
+        ?>
             <h3 class="text-center text-secondary">Lista de Clientes</h3>
             <table class="table table-bordered table-hover">
                 <thead>
@@ -44,14 +47,16 @@
                     </tr>
                 </thead>
                 <tbody>
+                <?php while($row = mysqli_fetch_assoc($sql)){ ?>
                     <tr>
-                        <td>João Amador</td>
-                        <td>Masculino</td>
+                        <td><?php echo $row['nome']; ?></td>
+                        <td><?php echo $row['sexo']; ?></td>
                         <td>
                             <a href="#" class="btn btn-success">Editar</a>
                             <a href="#" class="btn btn-danger">Excluir</a>
                         </td>
                     </tr>
+                <?php } ?>
                 </tbody>
             </table>
         </div>
