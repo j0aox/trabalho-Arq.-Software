@@ -11,4 +11,11 @@ if (isset($_POST['adicionar'])) {
     header('location: cadastrar-cliente.php');
 }
 
+// excluindo o cliente da base de dados
+if (isset($_GET['excluir'])) {
+    $id = $_GET['excluir'];
+    $resultado = "DELETE FROM cliente WHERE id='$id'";
+    $resul = mysqli_query($con, $resultado);
+    header('location: cadastrar-cliente.php');
+}
 ?>
