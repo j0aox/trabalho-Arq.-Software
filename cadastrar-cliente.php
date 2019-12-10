@@ -18,7 +18,7 @@
             <h3 class="text-center text-secondary">Adicionar Cliente</h3>
             <form action="" method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                    <input type="text" name="cliente" class="form-control" placeholder="nome do cliente">
+                    <input type="text" name="cliente" class="form-control" placeholder="nome do cliente" required>
                 </div>
                 <div class="form-group custom-control custom-radio">
                     <input type="radio" id="customRadio1" name="sexo" value="M" class="custom-control-input">
