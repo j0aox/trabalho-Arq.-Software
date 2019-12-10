@@ -73,8 +73,8 @@
 
     // sair
     if (isset($_GET['sair'])) {
-        //session_destroy();
-        //unset($_SESSION['nome']);
+        session_destroy();
+        unset($_SESSION['nome']);
         header('location: index.php');
     }
 
