@@ -17,11 +17,7 @@
                     </li>
             </div>
         </div>
-        <div>
-            <?php /*if (isset($_SESSION['nome'])): ?>
-            Bem Vindo: <?php echo $_SESSION['nome']; ?>
-            <?php endif */?>
-
+    
 <?php
     session_start();
     if (isset($_SESSION['nome'])): ?>
