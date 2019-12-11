@@ -1,15 +1,12 @@
 <?php include('db.php') ?>
 
 <?php
-    //session_start();
+    session_start();
 
     $nome = "";
     $email = "";
     $erros = array();
     
-
-    // conectando a base de dados
-    //$con = mysqli_connect('localhost', 'root', '', 'sistema');
 
     // Registrar usuário
     if (isset($_POST['registrar'])) {
