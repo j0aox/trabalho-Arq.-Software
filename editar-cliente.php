@@ -25,6 +25,7 @@ endif;
         <div class="col-md-4">
             <h3 class="text-center text-secondary">Editar Cliente</h3>
             <form action="" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="<?php echo $dados['id']; ?>">
                 <div class="form-group">
                     <input type="text" name="cliente" class="form-control" placeholder="nome do cliente" value="<?php echo $dados['nome']; ?>" required>
                 </div>
