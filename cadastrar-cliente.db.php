@@ -18,4 +18,13 @@ if (isset($_GET['excluir'])) {
     $resul = mysqli_query($con, $resultado);
     header('location: cadastrar-cliente.php');
 }
+
+if (isset($_POST['editar'])) {
+    $id = $_POST['id'];
+    $cliente = $_POST['cliente'];
+
+    $resul = "UPDATE cliente SET nome='$cliente', sexo='$sexo' WHERE id=$id";
+    $resultado = mysqli_query($con, $resul);
+    header('location: cadastrar-cliente.php');
+}
 ?>
