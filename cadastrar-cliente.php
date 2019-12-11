@@ -20,7 +20,7 @@
                     <input type="text" name="cliente" class="form-control" placeholder="nome do cliente" required>
                 </div>
                 <div class="form-group custom-control custom-radio">
-                    <input type="radio" id="customRadio1" name="sexo" value="M" class="custom-control-input">
+                    <input type="radio" id="customRadio1" name="sexo" value="M" class="custom-control-input" required>
                     <label class="custom-control-label" for="customRadio1">Masculino</label>
                 </div>
                 <div class="form-group custom-control custom-radio">
