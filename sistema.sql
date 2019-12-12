@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 12-Dez-2019 às 04:09
+-- Tempo de geração: 12-Dez-2019 às 21:49
 -- Versão do servidor: 10.4.8-MariaDB
 -- versão do PHP: 7.3.11
 
@@ -25,12 +25,34 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `aluguel`
+--
+
+CREATE TABLE `aluguel` (
+  `id` int(11) NOT NULL,
+  `carro` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `cliente` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `data_saida` date NOT NULL,
+  `hora_saida` time NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Extraindo dados da tabela `aluguel`
+--
+
+INSERT INTO `aluguel` (`id`, `carro`, `cliente`, `data_saida`, `hora_saida`) VALUES
+(10, 'red', 'amador', '1111-11-11', '11:11:00'),
+(11, 'red', 'lora', '2019-12-12', '16:57:00');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `cliente`
 --
 
 CREATE TABLE `cliente` (
   `id` int(11) NOT NULL,
-  `nome` varchar(200) DEFAULT NULL,
+  `nome` varchar(200) NOT NULL,
   `sexo` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -39,8 +61,9 @@ CREATE TABLE `cliente` (
 --
 
 INSERT INTO `cliente` (`id`, `nome`, `sexo`) VALUES
-(16, 'neto', 'M'),
-(20, 'lora', 'F');
+(21, 'amador', 'M'),
+(22, 'lora', 'F'),
+(23, 'neto', 'M');
 
 -- --------------------------------------------------------
 
@@ -60,10 +83,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id`, `nome`, `email`, `senha`) VALUES
-(6, 'dev', 'dev', 'e77989ed21758e78331b20e477fc5582'),
-(7, 'neto', 'neto', '202cb962ac59075b964b07152d234b70'),
-(8, 'dev', 'dev', 'e77989ed21758e78331b20e477fc5582'),
-(9, 'dev', 'dev', 'e77989ed21758e78331b20e477fc5582');
+(10, 'dev', 'dev', 'e77989ed21758e78331b20e477fc5582');
 
 -- --------------------------------------------------------
 
@@ -82,11 +102,17 @@ CREATE TABLE `veiculos` (
 --
 
 INSERT INTO `veiculos` (`id`, `carro`, `modelo`) VALUES
-(1, 'ferrari', 'black');
+(2, 'ferrari', 'red');
 
 --
 -- Índices para tabelas despejadas
 --
+
+--
+-- Índices para tabela `aluguel`
+--
+ALTER TABLE `aluguel`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Índices para tabela `cliente`
@@ -111,22 +137,28 @@ ALTER TABLE `veiculos`
 --
 
 --
+-- AUTO_INCREMENT de tabela `aluguel`
+--
+ALTER TABLE `aluguel`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
 -- AUTO_INCREMENT de tabela `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de tabela `veiculos`
 --
 ALTER TABLE `veiculos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
