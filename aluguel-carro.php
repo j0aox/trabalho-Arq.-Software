@@ -58,7 +58,7 @@
         </div>
         <div class="col-md-8">
         <?php 
-            //$sql = mysqli_query($con, "SELECT * FROM cliente");
+            $sql = mysqli_query($con, "SELECT * FROM aluguel");
         ?>
             <h3 class="text-center text-secondary">Lista de Clientes</h3>
             <table class="table table-bordered table-hover">
@@ -66,20 +66,22 @@
                     <tr>
                         <th>Carro</th>
                         <th>Cliente</th>
-                        <th>Ação</th>
+                        <th>Dia</th>
+                        <th>Hora</th>
                     </tr>
                 </thead>
                 <tbody>
-                <?php //while($row = mysqli_fetch_assoc($sql)){ ?>
+                <?php while($row = mysqli_fetch_assoc($sql)){ ?>
                     <tr>
-                        <td><?php // echo $row['nome']; ?></td>
-                        <td><?php // echo $row['sexo']; ?></td>
+                        <td><?php echo $row['carro']; ?></td>
+                        <td><?php echo $row['cliente']; ?></td>
+                        <td><?php echo $row['data_saida']; ?></td>
+                        <td><?php echo $row['hora_saida']; ?></td>
                         <td>
-                            <a href="editar-cliente.php?id=<?php // echo $row['id']; ?>" class="btn btn-success">Editar</a>
-                            <a href="cadastrar-cliente.php?excluir= <?php // echo $row['id']; ?> " class="btn btn-danger">Excluir</a>
+                            
                         </td>
                     </tr>
-                <?php //} ?>
+                <?php } ?>
                 </tbody>
             </table>
         </div>
