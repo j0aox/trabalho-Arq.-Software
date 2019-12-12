@@ -28,7 +28,9 @@
             </form>
         </div>
         <div class="col-md-8">
-       
+        <?php
+            $sql = mysqli_query($con, "SELECT * FROM veiculos");
+         ?>
             <h3 class="text-center text-secondary">Lista de Carros</h3>
             <table class="table table-bordered table-hover">
                 <thead>
@@ -39,16 +41,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                
+                <?php while($row = mysqli_fetch_assoc($sql)){ ?>
                     <tr>
-                        <td></td>
-                        <td></td>
+                        <td><?php echo $row['carro']; ?></td>
+                        <td><?php echo $row['modelo']; ?></td>
                         <td>
                             <a href="editar-carro.php?id=<?php echo $row['id']; ?>" class="btn btn-success">Editar</a>
                             <a href="cadastrar-carro.php?excluir= <?php echo $row['id']; ?> " class="btn btn-danger">Excluir</a>
                         </td>
                     </tr>
-                
+                <?php } ?>
                 </tbody>
             </table>
         </div>
