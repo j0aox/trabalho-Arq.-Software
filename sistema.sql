@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 09-Dez-2019 às 06:39
+-- Tempo de geração: 12-Dez-2019 às 04:09
 -- Versão do servidor: 10.4.8-MariaDB
 -- versão do PHP: 7.3.11
 
@@ -34,6 +34,14 @@ CREATE TABLE `cliente` (
   `sexo` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Extraindo dados da tabela `cliente`
+--
+
+INSERT INTO `cliente` (`id`, `nome`, `sexo`) VALUES
+(16, 'neto', 'M'),
+(20, 'lora', 'F');
+
 -- --------------------------------------------------------
 
 --
@@ -54,7 +62,27 @@ CREATE TABLE `usuario` (
 INSERT INTO `usuario` (`id`, `nome`, `email`, `senha`) VALUES
 (6, 'dev', 'dev', 'e77989ed21758e78331b20e477fc5582'),
 (7, 'neto', 'neto', '202cb962ac59075b964b07152d234b70'),
-(8, 'dev', 'dev', 'e77989ed21758e78331b20e477fc5582');
+(8, 'dev', 'dev', 'e77989ed21758e78331b20e477fc5582'),
+(9, 'dev', 'dev', 'e77989ed21758e78331b20e477fc5582');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `veiculos`
+--
+
+CREATE TABLE `veiculos` (
+  `id` int(11) NOT NULL,
+  `carro` varchar(250) DEFAULT NULL,
+  `modelo` varchar(250) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `veiculos`
+--
+
+INSERT INTO `veiculos` (`id`, `carro`, `modelo`) VALUES
+(1, 'ferrari', 'black');
 
 --
 -- Índices para tabelas despejadas
@@ -73,6 +101,12 @@ ALTER TABLE `usuario`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Índices para tabela `veiculos`
+--
+ALTER TABLE `veiculos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de tabelas despejadas
 --
 
@@ -80,13 +114,19 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT de tabela `veiculos`
+--
+ALTER TABLE `veiculos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

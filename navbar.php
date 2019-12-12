@@ -12,7 +12,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="cadastrar-cliente.php">Clientes</a>
-                            <a class="dropdown-item" href="#">Carros</a>
+                            <a class="dropdown-item" href="cadastrar-carro.php">Carros</a>
                         </div>
                     </li>
             </div>
