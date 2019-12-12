@@ -14,18 +14,18 @@ if (isset($_POST['adicionar'])) {
 // excluindo o cliente da base de dados
 if (isset($_GET['excluir'])) {
     $id = $_GET['excluir'];
-    $resultado = "DELETE FROM cliente WHERE id='$id'";
+    $resultado = "DELETE FROM veiculos WHERE id='$id'";
     $resul = mysqli_query($con, $resultado);
     header('location: cadastrar-carro.php');
 }
 
 // editar cliente
 if (isset($_POST['editar'])) {
-    $cliente = $_POST['cliente'];
-    $sexo = $_POST['sexo'];
+    $carro = $_POST['carro'];
+    $modelo = $_POST['modelo'];
     $id = $_POST['id'];
 
-    $resul = "UPDATE cliente SET nome='$cliente', sexo='$sexo' WHERE id=$id";
+    $resul = "UPDATE veiculos SET carro='$carro', modelo='$modelo' WHERE id=$id";
     $resultado = mysqli_query($con, $resul);
     header('location: cadastrar-carro.php');
 }
