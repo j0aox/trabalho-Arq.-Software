@@ -8,6 +8,14 @@
                 <a class="nav-item nav-link" href="dashboard.php">Dashboard<span class="sr-only">(current)</span></a>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Aluguéis
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="aluguel-carro.php">carros</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Cadastrar
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

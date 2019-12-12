@@ -17,20 +17,28 @@
             <h3 class="text-center text-secondary">Adicionar Cliente</h3>
             <form action="" method="post" enctype="multipart/form-data">
                 <select class="form-control">
-                <?php
+                    <?php
 
-                    $sql = mysqli_query($con, "SELECT * FROM veiculos ORDER BY modelo ASC");
+                        $sql = mysqli_query($con, "SELECT * FROM veiculos ORDER BY modelo ASC");
 
-				    while ($dados = mysqli_fetch_array($sql)) {
-					echo ("<option value='" .$dados['modelo']. "'>" .$dados['modelo']."</option>");
-                    }
-                
-			    ?>
+                        while ($dados = mysqli_fetch_array($sql)) {
+                        echo ("<option value='" .$dados['modelo']. "'>" .$dados['modelo']."</option>");
+                        }
+                    
+                    ?>
                 </select>
                 <br>
+
                 <select class="form-control">
-                    <option>cliente</option>
-                    <br>
+                    <?php
+
+                    $sql = mysqli_query($con, "SELECT * FROM cliente ORDER BY nome ASC");
+
+                    while ($dados = mysqli_fetch_array($sql)) {
+                    echo ("<option value='" .$dados['nome']. "'>" .$dados['nome']."</option>");
+                    }
+
+                    ?>
                 </select>
                 <br>
                 <button type="submit" name="" class="btn btn-secondary btn-block">Adicionar</button>
