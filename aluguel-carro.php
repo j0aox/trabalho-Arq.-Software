@@ -2,7 +2,7 @@
 
 <?php include('navbar.php') ?>
 
-<?php include('cadastrar-cliente.db.php') ?>
+<?php include('aluguel-carro.db.php') ?>
 
 
 <div class="container-fluid">
@@ -15,8 +15,8 @@
     <div class="row">
         <div class="col-md-4">
             <h3 class="text-center text-secondary">Adicionar Cliente</h3>
-            <form action="" method="post" enctype="multipart/form-data">
-                <select class="form-control">
+            <form action="aluguel-carro.db.php" method="post" enctype="multipart/form-data">
+                <select name="carro" class="form-control">
                     <?php
 
                         $sql = mysqli_query($con, "SELECT * FROM veiculos ORDER BY modelo ASC");
@@ -29,7 +29,7 @@
                 </select>
                 <br>
 
-                <select class="form-control">
+                <select name="cliente" class="form-control">
                     <?php
 
                     $sql = mysqli_query($con, "SELECT * FROM cliente ORDER BY nome ASC");
@@ -41,7 +41,18 @@
                     ?>
                 </select>
                 <br>
-                <button type="submit" name="" class="btn btn-secondary btn-block">Adicionar</button>
+
+               
+                <br>
+                <label>Data Saída: </label>
+                <input type="date" name="data_saida">
+
+                <label>Hora Saída: </label>
+                <input type="time" name="hora_saida"><br>
+                
+
+                <br>
+                <button type="submit" name="adicionar" class="btn btn-secondary btn-block">Adicionar</button>
                 <br>
             </form>
         </div>
